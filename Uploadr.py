@@ -29,5 +29,6 @@ if not flickr.token_valid(perms='write'):
     flickr.get_access_token(verifier)
 
 print('Step 2: use Flickr')
-resp = flickr.upload(filename='Seal.jpg', title='Seal', description='A picture of seal toy', format='rest')
-print(resp)
+resp = flickr.upload(filename='Seal.jpg', title='Seal', description='A picture of seal toy')
+image_id = resp.findtext('photoid')
+print('Image id', image_id)

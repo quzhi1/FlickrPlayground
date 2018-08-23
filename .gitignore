@@ -106,3 +106,4 @@ venv.bak/
 api_key.txt
 *.iml
 .idea/
+target/
